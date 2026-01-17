@@ -1,16 +1,116 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
   <title>Collin Quirke | Engineering Portfolio</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+      margin: 0;
+    }
+
+    header {
+      background: #020617;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid #1e293b;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      background: #020617;
+      padding: 10px;
+      border-bottom: 1px solid #1e293b;
+    }
+
+    nav a {
+      color: #93c5fd;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #60a5fa;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 30px;
+    }
+
+    .project {
+      background: #020617;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-left: 4px solid #3b82f6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #94a3b8;
+      border-top: 1px solid #1e293b;
+    }
+  </style>
 </head>
+
 <body>
+
+<header>
   <h1>Collin Quirke</h1>
   <p>Engineering Portfolio</p>
+</header>
 
-  <h2>UAV Design Challenge (2024)</h2>
-  <p>Designed and built a competition UAV for mission-based flight challenges.</p>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="projects.html">Projects</a>
+  <a href="resume.html">Resume</a>
+  <a href="contact.html">Contact</a>
+</nav>
 
-  <a href="docs/Nationals_Report.pdf">View Report</a>
+<div class="container">
+  <h2>About Me</h2>
+  <p>
+    I am an engineering student with experience in UAV design, CAD modeling,
+    electronics integration, and flight testing. This portfolio highlights
+    my senior-year UAV Design Challenge project and other technical work.
+  </p>
+
+  <h2>Featured Project</h2>
+
+  <div class="project">
+    <h3>UAV Design Challenge (2024)</h3>
+    <p>
+      Designed and built a competition UAV capable of mission-based flight,
+      payload delivery, and precision control.
+    </p>
+
+    <ul>
+      <li>3D CAD Design (Fusion 360)</li>
+      <li>Electronics & wiring integration</li>
+      <li>Flight testing and tuning</li>
+    </ul>
+
+    <a href="docs/Nationals_Report.pdf" style="color:#60a5fa;">View Report</a>
+  </div>
+
+</div>
+
+<footer>
+  © 2024 Collin Quirke
+</footer>
+
 </body>
 </html>
-
