@@ -157,7 +157,7 @@ nav a:hover {
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   grid-auto-rows: 160px;
   gap: 14px;
-  max-width: 300px;   /* Makes it smaller on desktop */
+  max-width: 100px;   /* Makes it smaller on desktop */
   margin: 40px auto;
 }
 
