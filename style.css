@@ -181,3 +181,69 @@ nav a:hover {
   font-weight: 600;
   color: #e5e7eb;
 }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Media | Collin Quirke</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="projects.html">Projects</a>
+  <a href="media.html">Media</a>
+  <a href="resume.html">Resume</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<div class="section">
+
+  <h1>Project Media</h1>
+  <p>
+    A visual collage of aerospace and mechanical engineering projects,
+    including rocket launches, propulsion testing, UAV flights, and CAD designs.
+  </p>
+
+  <div class="collage">
+
+    <div class="collage-item">
+      <img src="assets/media/rocket1.jpg" alt="Rocket Launch">
+      <div class="overlay">
+        <h3>High-Power Rocket Launch</h3>
+        <p>Tripoli Level 2 certification flight demonstrating structural integrity and stability.</p>
+      </div>
+    </div>
+
+    <div class="collage-item tall">
+      <img src="assets/media/rocket2.jpg" alt="Static Fire">
+      <div class="overlay">
+        <h3>Static Fire Test</h3>
+        <p>Solid rocket motor ground test to measure thrust and combustion stability.</p>
+      </div>
+    </div>
+
+    <div class="collage-item">
+      <img src="assets/media/uav1.jpg" alt="UAV Flight">
+      <div class="overlay">
+        <h3>UAV Flight Testing</h3>
+        <p>Mission validation and flight performance testing for design competition.</p>
+      </div>
+    </div>
+
+    <div class="collage-item wide">
+      <img src="assets/media/cad1.png" alt="CAD Design">
+      <div class="overlay">
+        <h3>CAD Structural Design</h3>
+        <p>Fusion 360 structural modeling for aerospace components.</p>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
