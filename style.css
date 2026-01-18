@@ -181,69 +181,71 @@ nav a:hover {
   font-weight: 600;
   color: #e5e7eb;
 }
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Media | Collin Quirke</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+.collage {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-auto-rows: 180px;
+  gap: 15px;
+  max-width: 900px;
+  margin: 40px auto;
+}
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="projects.html">Projects</a>
-  <a href="media.html">Media</a>
-  <a href="resume.html">Resume</a>
-  <a href="contact.html">Contact</a>
-</nav>
+.collage-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+}
 
-<div class="section">
+.collage-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
 
-  <h1>Project Media</h1>
-  <p>
-    A visual collage of aerospace and mechanical engineering projects,
-    including rocket launches, propulsion testing, UAV flights, and CAD designs.
-  </p>
+.collage-item:hover img {
+  transform: scale(1.08);
+}
 
-  <div class="collage">
+.collage-item .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 6, 23, 0.85);
+  color: #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  padding: 16px;
+  transition: opacity 0.4s ease;
+  font-size: 0.9rem;
+}
 
-    <div class="collage-item">
-      <img src="assets/media/rocket1.jpg" alt="Rocket Launch">
-      <div class="overlay">
-        <h3>High-Power Rocket Launch</h3>
-        <p>Tripoli Level 2 certification flight demonstrating structural integrity and stability.</p>
-      </div>
-    </div>
+.collage-item:hover .overlay {
+  opacity: 1;
+}
 
-    <div class="collage-item tall">
-      <img src="assets/media/rocket2.jpg" alt="Static Fire">
-      <div class="overlay">
-        <h3>Static Fire Test</h3>
-        <p>Solid rocket motor ground test to measure thrust and combustion stability.</p>
-      </div>
-    </div>
+/* Optional size variations */
+.collage-item.tall {
+  grid-row: span 2;
+}
 
-    <div class="collage-item">
-      <img src="assets/media/uav1.jpg" alt="UAV Flight">
-      <div class="overlay">
-        <h3>UAV Flight Testing</h3>
-        <p>Mission validation and flight performance testing for design competition.</p>
-      </div>
-    </div>
+.collage-item.wide {
+  grid-column: span 2;
+}
 
-    <div class="collage-item wide">
-      <img src="assets/media/cad1.png" alt="CAD Design">
-      <div class="overlay">
-        <h3>CAD Structural Design</h3>
-        <p>Fusion 360 structural modeling for aerospace components.</p>
-      </div>
-    </div>
+/* Mobile */
+@media (max-width: 768px) {
+  .collage {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 160px;
+  }
 
-  </div>
-
-</div>
-
-</body>
-</html>
+  .collage-item .overlay {
+    opacity: 1;
+    background: rgba(2, 6, 23, 0.7);
+  }
+}
