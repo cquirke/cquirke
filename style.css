@@ -223,3 +223,7 @@ nav a:hover {
     background: rgba(2, 6, 23, 0.7);
   }
 }
+.collage-wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+}
