@@ -259,8 +259,21 @@ html, body {
 
 /* Mobile Tap */
 @media (hover: none) {
-  .media-item:active .overlay,
   .media-item:focus-within .overlay {
     opacity: 1;
+  }
+}
+
+@media (hover: none) {
+  .media-item::after {
+    content: "Tap for details";
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    font-size: 0.7rem;
+    padding: 4px 8px;
+    border-radius: 6px;
   }
 }
