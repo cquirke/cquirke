@@ -153,25 +153,39 @@ nav a:hover {
 
 /* Collage in Media */
 .media-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 16px;
-  padding: 40px;
+  column-count: 3;
+  column-gap: 16px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .media-gallery {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 500px) {
+  .media-gallery {
+    column-count: 1;
+  }
 }
 
 .media-item {
   position: relative;
-  overflow: hidden;
+  margin-bottom: 16px;
+  break-inside: avoid;
   border-radius: 12px;
-  cursor: pointer;
+  overflow: hidden;
+  width: 100%;
 }
 
 .media-item img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
   display: block;
-  transition: transform 0.4s ease;
+  object-fit: cover;
 }
 
 /* Overlay */
@@ -188,6 +202,18 @@ nav a:hover {
   padding: 20px;
   opacity: 0;
   transition: opacity 0.3s ease;
+}
+
+@media (hover: hover) {
+  .media-item:hover .overlay {
+    opacity: 1;
+  }
+}
+
+@media (hover: none) {
+  .media-item:active .overlay {
+    opacity: 1;
+  }
 }
 
 .overlay h3 {
