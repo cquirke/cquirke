@@ -17,7 +17,7 @@ body {
   color: #e5e7eb;
 }
 
-nav {
+.main-nav {
   position: fixed;
   width: 100%;
   top: 0;
@@ -29,14 +29,14 @@ nav {
   z-index: 10;
 }
 
-nav a {
+.main-nav a {
   color: #ffffff;
   text-decoration: none;
   font-weight: 600;
   letter-spacing: 1px;
 }
 
-nav a:hover {
+.main-nav a:hover {
   color: #60a5fa;
 }
 
